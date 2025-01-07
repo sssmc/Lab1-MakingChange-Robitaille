@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=CppApplication_1
+PROJECTNAME=Lab1-MakingChange-Robitaille
 
 # Active Configuration
 DEFAULTCONF=Debug
