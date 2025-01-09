@@ -14,14 +14,14 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
+CC=clang
+CCC=clang++
+CXX=clang++
 FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=GNU-MacOSX
+CND_PLATFORM=CLang-MacOSX
 CND_DLIB_EXT=dylib
 CND_CONF=Debug
 CND_DISTDIR=dist
@@ -80,4 +80,4 @@ ${OBJECTDIR}/main.o: main.c
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-include .dep.inc
+inclu

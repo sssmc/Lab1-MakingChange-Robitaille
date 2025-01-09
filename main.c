@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.c
  * Author: Sebastien Robitaille
@@ -25,6 +19,8 @@
 double price, tendered, changeDue;
 
 int numOfChangeItems = 0;
+
+double floatErrorCorrection = 1e-6;
 
 /*
  * 
@@ -53,43 +49,36 @@ int main(int argc, char** argv) {
     numOfChangeItems = changeDue / 20;
     printf("Twenties: %d\n", numOfChangeItems);
     changeDue -= (numOfChangeItems * 20);
+    changeDue +=floatErrorCorrection;
+    //printf("Remaining Change Due: %lf\n", changeDue);
     
     //Tens
     numOfChangeItems = changeDue / 10;
     printf("Tens: %d\n", numOfChangeItems);
     changeDue -= (numOfChangeItems * 10);
+    changeDue +=floatErrorCorrection;
+    //printf("Remaining Change Due: %lf\n", changeDue);
+    
     
     //Fives
     numOfChangeItems = changeDue / 5;
     printf("Fives: %d\n", numOfChangeItems);
     changeDue -= (numOfChangeItems * 5);
+    changeDue +=floatErrorCorrection;
+    //printf("Remaining Change Due: %lf\n", changeDue);
+    
     
     //Toonies
     numOfChangeItems = changeDue / 2;
     printf("Toonies: %d\n", numOfChangeItems);
     changeDue -= (numOfChangeItems * 2);
+    changeDue +=floatErrorCorrection;
+    //printf("Remaining Change Due: %lf\n", changeDue);
+    
     
     //Loonies
     numOfChangeItems = changeDue / 1;
     printf("Loonies: %d\n", numOfChangeItems);
     changeDue -= (numOfChangeItems * 1);
-    
-    //Quarters
-    numOfChangeItems = changeDue / 0.25;
-    printf("Quarters: %d\n", numOfChangeItems);
-    changeDue -= (numOfChangeItems * 0.25);
-    
-    //Dimes
-    numOfChangeItems = changeDue / 0.1;
-    printf("Dimes: %d\n", numOfChangeItems);
-    changeDue -= (numOfChangeItems * 0.1);
-    
-    //Nickles
-    numOfChangeItems = changeDue / 0.05;
-    printf("Nickles: %d\n", numOfChangeItems);
-    changeDue -= (numOfChangeItems * 0.05);
-    
-    return (EXIT_SUCCESS);
-}
-
-
+    changeDue +=floatErrorCorrection;
+    //printf("Remai
